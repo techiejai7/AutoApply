@@ -11,6 +11,9 @@ from langchain_openai import ChatOpenAI
 
 from browser_use import Agent
 
+from dotenv import load_dotenv
+load_dotenv()
+
 """
 Example: Using the 'Scroll down' action.
 
@@ -18,7 +21,7 @@ This script demonstrates how the agent can navigate to a webpage and scroll down
 If no amount is specified, the agent will scroll down by one page height.
 """
 
-llm = ChatOpenAI(model='gpt-4o')
+llm = ChatOpenAI(model='gpt-3.5-turbo')
 
 agent = Agent(
 	# task="Navigate to 'https://en.wikipedia.org/wiki/Internet' and scroll down by one page - then scroll up by 100 pixels - then scroll down by 100 pixels - then scroll down by 10000 pixels.",
